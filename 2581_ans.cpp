@@ -10,8 +10,9 @@ int main(void)
               };
 
     arr[0] = 1, arr[1] = 1;
+
     for (j = 2; j < 10000 / 2; j++)
-        for (i = j * j; i < 10000; i++)
+        for (i = j * 2; i < 10000; i++)
             if (i % j == 0)
                 arr[i] = 1;
 
@@ -26,6 +27,6 @@ int main(void)
                 min = i;
         }
     }
-    (sum == 0) ? printf("-1") : printf("%d\n%d\n", sum, min);
+    (sum == 0) ? printf("-1\n") : printf("%d\n%d\n", sum, min);
     return 0;
 }
